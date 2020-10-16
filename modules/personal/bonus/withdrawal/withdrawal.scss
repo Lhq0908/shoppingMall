@@ -1,0 +1,97 @@
+.withdrawal {
+  padding: 25rpx;
+
+  .d-flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .withdrawal-item {
+    background: #fff;
+    padding: 25rpx;
+    border-radius: 14rpx;
+    .withdrawal-item-top{
+      font-size: 30rpx;
+      color: #333;
+      .right{
+        font-size: 28rpx;
+        image{
+          width: 40rpx;
+          height: 40rpx;
+          border-radius: 50%;
+          margin-right: 10rpx;
+        }
+      }
+    }
+    .withdrawal-field {
+      padding: 25rpx 0rpx 0;
+      border-bottom: 1px solid #eee;
+      .symbol{
+        font-size: 40rpx;
+      }
+      .field {
+        flex: 1;
+        font-size: 50rpx;
+        height: 100rpx;
+        input{
+          height: 100rpx;
+        }
+      }
+    }
+    .withdrawal-whole{
+      padding: 20rpx 0 ;
+      font-size: 24rpx;
+      color: #a5a4a4;
+      text{
+        color: #007aff
+      }
+    }
+  }
+  .withdrawal-cost{
+    background: #fff;
+    padding: 25rpx;
+    border-radius: 14rpx;
+    margin-top: 25rpx;
+    .cost-item{
+      font-size: 30rpx;
+      color: #333;
+      margin-bottom: 10rpx;
+      .cost-item-r{
+        color: #a5a4a4;
+      }
+      .money{
+        color: #ff0030
+      }
+    }
+    .cost-item:last-child{
+      margin-bottom: 0!important
+    }
+  }
+  .btn{
+    display: flex;
+    justify-content: center;
+    margin-top:60rpx;
+    .btn-item{
+    width: 250rpx !important;
+    }
+
+  }
+  .tips{
+    padding: 0 30rpx;
+    margin-top: 35rpx;
+    font-size: 28rpx;
+    color: #a5a4a4;
+    line-height: 48rpx;
+  }
+  // 未绑定微信弹窗
+  .dialog{
+    padding: 25rpx;
+
+  }
+  .dialog-text{
+    padding: 30rpx;
+    color: #333;
+  }
+
+}

@@ -1,0 +1,96 @@
+<d1-layout id="layout" model="custom" background="transparent" fixed="{{true}}" type="light" bind:refresh="refresh" bind:load="load">
+	<view class="detail-index">
+		<view class="banner">
+			<swiper class="banner-swiper" indicator-dots="true" autoplay="true" interval="3000" duration="700" circular="true" indicator-color="rgba(255,255,255,0.5)" indicator-active-color="#ffffff">
+				<block wx:for="{{3}}" wx:key="*this">
+					<swiper-item class="banner-item">
+						<van-image width="100%" height="100%" image-class="banner-thumb" fit="cover" lazy-load src="https://img.yzcdn.cn/vant/cat.jpeg" />
+					</swiper-item>
+				</block>
+			</swiper>
+		</view>
+
+		<view class="top-title">
+			<view class="item-text">
+				<text>恐龙餐盒</text>
+			</view>
+			<view class="price">
+				<text class="cost-price">￥9600</text>
+				<text>南宁</text>
+			</view>
+		</view>
+		<!-- 内容 -->
+		<van-tabs active="{{ active }}" bind:change="onChange" color="#ec612a">
+			<van-tab title="简介">
+				<view class="synopsis">
+					<text class="text-h1">恐龙餐盒</text>
+					<text class="text-p">
+                恐龙餐盒恐龙餐盒恐龙餐盒恐龙餐盒恐龙餐盒恐龙餐盒恐龙餐盒恐龙餐盒
+              </text>
+					<view>
+						<van-image fit="widthFix" width="100%" height="100%" radius="10rpx" lazy-load src="https://img.yzcdn.cn/vant/cat.jpeg" />
+					</view>
+				</view>
+			</van-tab>
+			<van-tab title="商品评价">
+				<view class="estimate">
+					<view class="title">
+						<text>4.9分</text>
+						<van-rate value="{{ value }}" disabled disabled-color="#ff9800" />
+					</view>
+
+					<view class="nav-ul">
+						<view class="nav-li active-item">
+							全部(999)
+						</view>
+						<view class="nav-li">
+							好评(997)
+						</view>
+						<view class="nav-li">
+							中评(2)
+						</view>
+						<view class="nav-li">
+							全部(0)
+						</view>
+					</view>
+
+					<view class="list-ul">
+						<view class="item-top">
+							<image src="../../assets/banner_01.jpg" mode="aspectFill" />
+							<view class="li-left">
+								<text class="text-h3">测试的</text>
+								<view class="">
+									<van-rate value="{{ valueItem }}" count="{{ 5 }}" />
+									<text>2016-01-01 09:55</text>
+								</view>
+							</view>
+						</view>
+					</view>
+
+					<view class="text-item">
+						<text>恐龙餐盒</text>
+					</view>
+					<view class="img-ul">
+						<van-image wx:for="{{4}}" wx:key="index" image-class="item-thumb" lazy-load src="https://bkimg.cdn.bcebos.com/pic/71cf3bc79f3df8dcd1004db07f59658b4710b91282f3?x-bce-process=image/watermark,image_d2F0ZXIvYmFpa2UyNzI=,g_7,xp_5,yp_5" fit="cover" />
+					</view>
+				</view>
+			</van-tab>
+		</van-tabs>
+	</view>
+	<!-- 底部 -->
+	<view class="share" slot="bottom">
+		<view class="action">
+			<view class="action-item">
+				<van-icon name="like-o" size="35rpx" />
+				<view>收藏</view>
+			</view>
+			<view class="action-item">
+				<van-icon name="phone-o" size="35rpx" />
+				<view>客服</view>
+			</view>
+		</view>
+		<view class="talk" bindtap="openComment">
+			<view class="btn">立即预定</view>
+		</view>
+	</view>
+</d1-layout>

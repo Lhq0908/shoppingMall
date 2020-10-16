@@ -1,0 +1,157 @@
+.tabs-nav {
+  height: 90rpx;
+  line-height: 90rpx;
+  background: #fff;
+  width: 100%;
+  z-index: 999;
+  text-align: center;
+
+  &>view {
+    display: flex;
+
+    // padding: 0 2rpx;
+    view {
+      flex: 0 0 20%;
+      font-size: 28rpx;
+      color: #333;
+      text-align: center;
+      height: 90rpx;
+    }
+
+    .active {
+      color: #ec612a;
+      position: relative;
+
+      &:after {
+        content: '';
+        width: 80rpx;
+        height: 4rpx;
+        background: #ec612a;
+        border-radius: 1rpx;
+        position: absolute;
+        bottom: 4rpx;
+        left: 50%;
+        margin-left: -40rpx;
+      }
+    }
+  }
+}
+
+.order-index {
+
+  .d-flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+
+  .ul {
+    padding: 25rpx 25rpx 100rpx;
+
+    .li {
+      background: #fff;
+      padding: 30rpx 19rpx;
+      border-radius: 14rpx;
+      margin-bottom: 20rpx;
+
+      .li-top {
+        font-size: 30rpx;
+        padding-bottom: 30rpx;
+        border-bottom: 1px solid #E5E5E5;
+        color: #333;
+
+        text:last-child {
+          font-size: 24rpx;
+          color: #ec612a !important;
+        }
+      }
+
+      .li-middle {
+        padding: 20rpx 0;
+        display: flex;
+
+        .img-l {
+          width: 197rpx;
+          height: 197rpx;
+          border-radius: 14rpx;
+          margin-right: 32rpx;
+
+          image {
+            width: 100%;
+            height: 100%;
+            border-radius: 14rpx;
+          }
+        }
+
+        .img-r {
+          flex: 1;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+
+          .title {
+            font-size: 30rpx;
+            color: #000000;
+            display: -webkit-box;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            word-wrap: break-word;
+          }
+
+          .specs {
+            font-size: 24rpx;
+            color: #AAAAAA;
+            margin-top: 30rpx;
+          }
+
+
+        }
+
+        .price-item {
+          text-align: right;
+          font-size: 30rpx;
+          color: #000000;
+
+          .num {
+            font-size: 24rpx;
+            color: #AAAAAA;
+          }
+        }
+      }
+
+      .total {
+        display: flex;
+        justify-content: flex-end;
+        font-size: 28rpx;
+        color: #000000;
+
+        text {
+          color: #AAAAAA;
+        }
+
+        text:last-child {
+          color: #000;
+          margin-left: 20rpx;
+        }
+      }
+
+      .li-end {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        padding-top: 20rpx;
+
+        .btn {
+          height: 54rpx;
+          margin-left: 21rpx;
+          font-size: 24rpx;
+
+        }
+
+      }
+    }
+  }
+}

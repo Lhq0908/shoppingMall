@@ -1,0 +1,8 @@
+<view class="d1-tabbar">
+    <view class="d1-tabbar-content">
+        <slot></slot>
+    </view>
+    <view style="height:50px !important;">
+
+    </view>
+</view>

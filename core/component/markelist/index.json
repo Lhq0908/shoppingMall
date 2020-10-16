@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "usingComponents": {
+    "van-image": "../../core/plugins/vant/image/index",
+    "van-progress": "../../core/plugins/vant/progress/index"
+  }
+}

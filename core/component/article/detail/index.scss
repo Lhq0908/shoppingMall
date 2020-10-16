@@ -1,0 +1,53 @@
+.article-detail {
+  display: flex;
+  flex-direction: column;
+
+  .text {
+    display: flex;
+    align-items: flex-start;
+
+    .t {
+      font-size: 32rpx;
+      color: #333;
+      line-height: 2;
+    }
+  }
+
+  .advert {
+    .tips {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .ad {
+        color: #999999;
+        font-size: 28rpx;
+      }
+
+      .action {
+        height: 56rpx;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 26rpx;
+        color: #666666;
+        // border-radius: 28rpx;
+        border: solid #fed200 1px;
+        padding: 0 25rpx;
+      }
+    }
+  }
+
+  &>view {}
+
+  .imageClass {
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .customClass {
+    margin: 0 !important;
+    padding: 0 !important;
+    display: block !important;
+  }
+}

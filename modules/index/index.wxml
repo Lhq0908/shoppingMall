@@ -1,0 +1,37 @@
+<d1-layout id="layout" background="transparent" type="light" fixed="{{true}}" show-back="{{false}}" show-home="{{false}}" bind:refresh="refresh" bind:load="load" more="{{false}}">
+	<view class="index">
+		<!-- banner -->
+		<view class="banner">
+			<swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" indicator-active-color="#ffffff">
+				<block wx:for="2" wx:key="index">
+					<swiper-item>
+						<image src="https://img.yzcdn.cn/vant/cat.jpeg" class="slide-image" mode="aspectFill" />
+					</swiper-item>
+				</block>
+			</swiper>
+		</view>
+		<view class="chooseCard">
+			<view class="title">新品上新</view>
+			<view class="card">
+				<view wx:for="{{2}}" wx:key="*this" class="li">
+					<list-item />
+				</view>
+			</view>
+
+
+		</view>
+
+		<view class="chooseCard">
+			<view class="title">热门商品</view>
+			<view class="card">
+				<view wx:for="{{6}}" wx:key="*this" class="li">
+					<navigator url="/modules/detail/detail">
+						<list-item />
+						</navigator>
+				</view>
+			</view>
+		</view>
+
+		<view class="history">没有数据咯</view>
+	</view>
+</d1-layout>

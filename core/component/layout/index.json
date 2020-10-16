@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "usingComponents": {
+    "d1-login": "../login/index",
+    "d1-refresh": "../refresh/index"
+  }
+}

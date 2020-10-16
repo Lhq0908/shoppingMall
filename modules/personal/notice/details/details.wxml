@@ -1,0 +1,21 @@
+<d1-layout id="layout" title="通知详情" background="#FFFFFF" show-back="{{true}}" type="black" bind:refresh="refresh" bind:load="load">
+  <view class="notice-details">
+    <view class="top">
+      <view class="title">
+        标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题
+        <view class="dateTime">
+          2020-06-09 18:00:06
+        </view>
+      </view>
+    </view>
+    <view class="content">
+      <view class="text">
+        增强版的 img 标签，提供多种图片填充模式，支持图片懒加载、加载中提示、加载失败提示; 增强版的 img 标签，提供多种图片填充模式，支持图片懒加载、加载中提示、加载失败提示 增强版的 img 标签，提供多种图片填充模式，支持图片懒加载、加载中提示、加载失败提示 增强版的 img 标签，提供多种图片填充模式，支持图片懒加载、加载中提示、加载失败提示 增强版的 img 标签，提供多种图片填充模式，支持图片懒加载、加载中提示、加载失败提示
+      </view>
+      <image class="img" mode="aspectFill" src="https://img.yzcdn.cn/vant/cat.jpeg" />
+      <view class="text">
+        增强版的 img 标签，提供多种图片填充模式，支持图片懒加载、加载中提示、加载失败提示; 增强版的 img 标签，提供多种图片填充模式，支持图片懒加载、加载中提示、加载失败提示 增强版的 img 标签，提供多种图片填充模式，支持图片懒加载、加载中提示、加载失败提示 增强版的 img 标签，提供多种图片填充模式，支持图片懒加载、加载中提示、加载失败提示 增强版的 img 标签，提供多种图片填充模式，支持图片懒加载、加载中提示、加载失败提示
+      </view>
+    </view>
+  </view>
+</d1-layout>

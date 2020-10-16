@@ -1,0 +1,39 @@
+.card-item {
+  background: #fff;
+  border-radius: 15rpx;
+  margin-bottom: 30rpx;
+  box-shadow: 0 6rpx 8rpx #eeeeee;
+
+  .img {
+    width: 100%;
+    height: 200rpx;
+    border-top-left-radius:15rpx;
+    border-top-right-radius:15rpx;
+  }
+
+  .card-name {
+    text-align: left;
+    padding: 15rpx;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-weight: bold;
+  }
+
+  .price-item {
+    padding: 0 15rpx 15rpx;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 26rpx;
+
+    .price {
+      color: #ec612a;
+    }
+
+    .city {
+      font-size: 22rpx;
+    }
+  }
+
+}

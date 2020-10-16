@@ -1,0 +1,58 @@
+<d1-layout id="layout" title="我的订单" background="#FFFFFF" show-back="{{true}}" type="black" bind:refresh="refresh" bind:load="load">
+	<!-- Tab切换 -->
+	<view class="tabs-nav" slot="top">
+		<view>
+			<view bindtap="navClick" data-type="0" class="{{showId == 0 ? 'active' : ''}}">全部</view>
+			<view bindtap="navClick" data-type="1" class="{{showId == 1 ? 'active' : ''}}">待付款</view>
+			<view bindtap="navClick" data-type="2" class="{{showId == 2 ? 'active' : ''}}">待发货</view>
+			<view bindtap="navClick" data-type="3" class="{{showId == 3 ? 'active' : ''}}">待收货</view>
+			<view bindtap="navClick" data-type="4" class="{{showId == 4 ? 'active' : ''}}">已完成</view>
+		</view>
+	</view>
+	<!-- 列表 -->
+	<view class="order-index">
+		<view class="o-content">
+			<view class="ul">
+				<view class="li" wx:for="{{10}}" wx:key="*this">
+					<navigator url="/modules/personal/order/details/details" hover-class="none">
+						<view class="li-top d-flex">
+							<text>xxx专营店</text>
+							<text>待付款</text>
+						</view>
+						<view class="li-middle">
+							<view class="img-l">
+								<image class="" src="../../../../assets/banner_01.jpg" mode="aspectFill" />
+							</view>
+							<view class="img-r">
+								<view class="">
+									<view class="title">
+										帆布包
+									</view>
+									<view class="specs">
+										白色
+									</view>
+								</view>
+
+							</view>
+							<view class="price-item ">
+								<view class="price">￥9999</view>
+								<text class="num">×2</text>
+							</view>
+						</view>
+
+						<view class="total">
+							<text>总价￥9600</text>
+							<text>实付款￥9600</text>
+						</view>
+						<view class="li-end">
+							<!-- <van-button round color="#666666" custom-class="btn" plain>提醒发货</van-button> -->
+							<!-- <van-button round color="#666666" custom-class="btn" plain>查看物流</van-button> -->
+							<!-- <van-button round color="#ec612a" plain custom-class="btn">确认收货</van-button> -->
+							<van-button round color="#ec612a" plain custom-class="btn">立即付款</van-button>
+						</view>
+					</navigator>
+				</view>
+			</view>
+		</view>
+	</view>
+</d1-layout>

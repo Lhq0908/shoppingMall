@@ -1,0 +1,51 @@
+<d1-layout id="layout" title="提现" background="#FFFFFF" show-back="{{true}}" type="black" bind:refresh="refresh" bind:load="load">
+  <view class="withdrawal">
+    <view class="withdrawal-item">
+      <view class="withdrawal-item-top d-flex">
+        <view class="">
+          提现至微信
+        </view>
+        <view class="d-flex right">
+          <image src="https://img.yzcdn.cn/vant/cat.jpeg" mode="scaleToFill" /> 黄小小
+        </view>
+      </view>
+      <view class="withdrawal-field d-flex">
+        <view class="symbol">
+          ￥
+        </view>
+        <view class="field">
+          <input class="weui-input" placeholder="请输入金额" type="number" value="{{ balance }}" bindinput="onBalance"/>
+        </view>
+      </view>
+      <view class="withdrawal-whole">
+        可提现余额￥{{total}}，
+        <text bindtap="wholeClick" bindtap="totalClick" data-total="{{total}}">全部提现</text>
+      </view>
+    </view>
+    <view class="withdrawal-cost">
+      <view class="cost-item d-flex">
+        <text>本次手续费</text>
+        <text class="cost-item-r">￥400</text>
+      </view>
+      <view class="cost-item d-flex">
+        <text>实际到账</text>
+        <text class="money">￥555555</text>
+      </view>
+    </view>
+    <view class="btn" bindtap="dialogClick">
+      <van-button color="#3352f5" custom-class="btn-item" round>下一步</van-button>
+    </view>
+    <view class="tips">
+      <view>提现说明:</view>
+      <view>1、单笔最高金额10000元，每笔手续费3元</view>
+      <view>2、到账时间以每个银行结算时间为准</view>
+    </view>
+    <!-- 未绑定微信弹窗提示 -->
+    <van-dialog use-slot show="{{ popupShow }}" show-cancel-button bind:close="onClose" confirm-button-text="立即绑定">
+      <view class="dialog-text">
+        当前账号未绑定微信，无法申请提现，请绑定微信后再重新操作！
+      </view>
+    </van-dialog>
+
+  </view>
+</d1-layout>

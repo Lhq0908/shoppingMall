@@ -1,0 +1,10 @@
+<view class="card-item">
+	<image src="https://img.yzcdn.cn/vant/cat.jpeg" mode="aspectFill" class="img"/>
+	<view class="card-name">
+		恐龙餐盒
+	</view>
+	<view class="price-item">
+		<text class="price">￥9600</text>
+		<text class="city">南宁</text>
+	</view>
+</view>

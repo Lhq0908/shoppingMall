@@ -1,0 +1,19 @@
+<d1-layout id="layout" title="系统通知" background="#FFFFFF" show-back="{{true}}" type="black" bind:refresh="refresh" bind:load="load">
+  <view class="notice-index">
+    <view class="ul">
+      <view class="li" wx:for="{{10}}" wx:key="*this">
+      <navigator url="/pages/personal/notice/details/details"  hover-class="none">
+        <view class="time">2020年06月08号</view>
+        <view class="li-item">
+          <view class="title">宝贝上新啦，来看看是不是你喜欢的</view>
+          <view class="details">点击查看</view>
+          <image class="img" mode="aspectFill" src="../../../../assets/banner_01.jpg" />
+        </view>
+        </navigator>
+      </view>
+
+    </view>
+
+
+  </view>
+</d1-layout>

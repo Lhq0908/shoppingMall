@@ -1,0 +1,12 @@
+<view class="d1-login-mask" wx:if="{{show}}"></view>
+<view class="d1-login" wx:if="{{show}}">
+    <view class="d1-login-dialog">
+        <image class="logo" mode="aspectFill" src="../../../assets/logo.jpg" />
+        <view class="msg-content">
+            <view class="title">企董汇欢迎您</view>
+        </view>
+        <button open-type="getUserInfo" bindgetuserinfo="_d1_userLogin" type="primary" class="auth-login-btn">
+            微信登录
+        </button>
+    </view>
+</view>

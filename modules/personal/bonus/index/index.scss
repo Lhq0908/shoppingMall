@@ -1,0 +1,117 @@
+.bonus-index {
+  padding: 25rpx;
+  // 余额
+  .balance {
+    padding: 38rpx;
+    border-radius: 14rpx;
+    background-image: linear-gradient(to right, #ef3606 , #fd7c05);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #fff;
+
+    .balance-middle {
+      flex: 1;
+      margin-left: 20rpx;
+
+      .price-item {
+        font-size: 40rpx;
+        height: 40rpx;
+
+        text {
+          font-size: 24rpx;
+        }
+      }
+
+      .price-text {
+        font-size: 22rpx;
+        margin-top: 10rpx;
+      }
+    }
+
+    .balance-r {
+      display: flex;
+      align-items: center;
+
+      text {
+        margin-right: 20rpx;
+      }
+    }
+  }
+
+  .d-flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  // 明细
+  .detailed {
+    background: #fff;
+    border-radius: 14rpx;
+    margin-top: 25rpx;
+
+    .detailed-top {
+      padding: 25rpx;
+      border-bottom: 1px solid #eee;
+
+      .detailed-top-l {
+        font-size: 30rxp;
+        color: #333;
+        .icon{
+          margin-left: 15rpx;
+        }
+      }
+
+      .detailed-top-r {
+        font-size: 24rpx;
+        color: #a5a4a4;
+
+        view:last-child {
+          margin-top: 10rpx;
+        }
+      }
+    }
+
+    .detailed-list {
+      padding: 0 25rpx 25rpx;
+
+      .li {
+        padding: 20rpx 0;
+        border-bottom: 1px solid #eee;
+
+        .li-img {
+          width: 85rpx;
+          height: 85rpx;
+          border-radius: 10rpx;
+        }
+
+        .li-middle {
+          flex: 1;
+          margin-left: 20rpx;
+          .words{
+            font-size: 30rpx;
+            color: #333;
+          }
+          .time{
+            font-size: 24rpx;
+            color: #a5a4a4;
+            margin-top: 20rpx;
+          }
+
+        }
+        .price-one{
+          font-size: 30rpx;
+          color: #fd7b05
+        }
+        .price-two{
+          font-size: 30rpx;
+          color: #07c160
+        }
+      }
+      .li:last-child{
+        border-bottom: none;
+        padding-bottom: 0!important
+      }
+    }
+  }
+}

@@ -1,0 +1,112 @@
+.personal-index {
+  .top {
+    width: 100%;
+
+    .top-bg {
+      width: 100%;
+      position: relative;
+      z-index: -1;
+      height: 400rpx;
+      image {
+        width: 100%;
+        
+      }
+    }
+
+    .modular {
+      width: 100%;
+      position: absolute;
+      top: 100rpx;
+
+      .top-item {
+        display: flex;
+        align-items: center;
+
+        .top-item-head {
+          width: 120rpx;
+          height: 120rpx;
+          display: block;
+          border-radius: 50%;
+          margin-left: 25rpx;
+        }
+
+        .top-item-info {
+          flex: 1;
+          margin-left: 25rpx;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+
+          .name {
+            color: #fff;
+            font-size: 32rpx;
+          }
+
+          .info-icon {
+            margin-right: 25rpx;
+
+            image {
+              width: 40rpx;
+              height: 40rpx;
+            }
+
+            image:last-child {
+              margin-left: 20rpx;
+            }
+          }
+        }
+      }
+
+      .submenu {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        color: #fff;
+        text-align: center;
+        margin: 60rpx 70rpx 0;
+        font-size: 24rpx;
+
+        text {
+          display: block;
+          font-size: 28rpx;
+        }
+      }
+    }
+  }
+
+  .card {
+    margin-top: -100rpx;
+    z-index: 5;
+
+    .card-item {
+      background: #fff;
+      padding: 35rpx 30rpx;
+      margin: 0 25rpx;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-radius: 20rpx;
+      box-shadow: 0 0 10rpx #ccc;
+
+      .li {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        font-size: 32rpx;
+        color: #333;
+
+        image {
+          width: 88rpx;
+          height: 88rpx;
+          margin-right: 10rpx;
+        }
+      }
+
+      .li:last-child {
+        border-left: 1px solid #ccc;
+        padding-left: 25rpx;
+      }
+    }
+  }
+
+}

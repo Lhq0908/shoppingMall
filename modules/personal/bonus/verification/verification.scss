@@ -1,0 +1,86 @@
+.verification {
+  .input{
+    background: red;
+  }
+  .btn-field{
+    color: #007AFF;
+    border: none !important;
+    font-size: 30rpx;
+
+  }
+  .content{
+      padding-top: 24rpx;
+      .phone{
+          padding: 0 24rpx;
+          height: 120rpx;
+          display: flex;
+          padding: 0 36rpx;
+          background: #fff;
+          text{
+              font-size: 28rpx;
+              color: #333;
+              width: 150rpx;
+              line-height: 120rpx;
+              display: inline-block;
+          }
+          input{
+              flex: 1;
+              outline: none;
+              border: 0;
+              height: 120rpx;
+              line-height: 120rpx;
+              color: #333;
+              font-size: 28rpx;
+          }
+      }
+      .code{
+          border-top: 2rpx solid #eee;
+          height:120rpx;
+          padding: 0 36rpx;
+          background: #fff;
+          display: flex;
+          text{
+              font-size: 28rpx;
+              color: #333;
+              line-height: 120rpx;
+              width: 150rpx;
+              display: inline-block;
+          }
+          input{
+              flex:1;
+              outline: none;
+              border: 0;
+              height: 120rpx;
+              line-height: 120rpx;
+              color: #333;
+              font-size: 28rpx;
+          }
+          .gain{
+              padding-left: 20rpx;
+              font-size: 26rpx;
+              color: #3D67F6;
+              text-align: right;
+          }
+      }
+      .next-step-btn{
+          width: 330rpx;
+          height: 98rpx;
+          line-height: 98rpx;
+          background: #3D67F6;
+          border-radius: 50rpx;
+          text-align: center;
+          font-size: 30rpx;
+          color: #fff;
+          margin: 60rpx auto 0;
+      }
+  }
+  .btn {
+    display: flex;
+    justify-content: center;
+    margin-top: 60rpx;
+
+    .btn-item {
+      width: 250rpx !important;
+    }
+  }
+}

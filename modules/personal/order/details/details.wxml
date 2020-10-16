@@ -1,0 +1,81 @@
+<d1-layout id="layout" title="订单详情" background="#FFFFFF" show-back="{{true}}" type="black" bind:refresh="refresh" bind:load="load">
+	<view class="order-details">
+		<!-- 订单状态 -->
+		<view class="state">
+			待发货
+			<van-icon name="logistics" size="80rpx" />
+		</view>
+		<!-- 地址 -->
+		<view class="address">
+			<view class="address-item">
+				<van-icon name="location-o" size="36rpx" />
+				<view class="address-item-info">
+					<view class="name">昵称
+						<text>12354698741</text>
+					</view>
+					<view>广西南宁市西乡塘区友爱北路26号</view>
+				</view>
+				<van-icon name="arrow" />
+			</view>
+		</view>
+		<!-- 商品 -->
+		<view class="goods">
+			<view class="li-top d-flex">
+				xxx专营店
+			</view>
+			<view class="li-middle">
+				<view class="img-l">
+					<image class="" src="../../../../assets/banner_01.jpg" mode="aspectFill" />
+				</view>
+				<view class="img-r">
+					<view class="">
+						<view class="title">
+							帆布包
+						</view>
+						<view class="specs">
+							白色
+						</view>
+					</view>
+
+				</view>
+				<view class="price-item ">
+					<view class="price">￥9999</view>
+					<text class="num">×2</text>
+				</view>
+			</view>
+
+			<view class="total">
+				<van-cell-group>
+					<van-cell title="总价" value="￥9600" custom-class="cell" title-class="cell-title" value-class="value" border="{{false}}" />
+					<van-cell title="运费(快递)" value="￥0.00" custom-class="cell" title-class="cell-title" value-class="value" border="{{false}}" />
+					<van-cell title="实付款" value="￥9600" custom-class="cell" title-class="cell-title" value-class="value pay-value" border="{{false}}" />
+				</van-cell-group>
+			</view>
+		</view>
+		<!-- 订单信息 -->
+		<view class="order-info">
+			<view class="title">订单信息</view>
+			<van-cell-group>
+				<van-cell title="订单编号：" value="220521454551155466" title-class="cell-title" value-class="value" border="{{false}}" />
+				<van-cell title="创建时间：" value="2020-09-19 22:25:23" title-class="cell-title" value-class="value" border="{{false}}" />
+				<van-cell title="付款时间：" value="2020-09-19 22:28:41" title-class="cell-title" value-class="value" border="{{false}}" />
+				<van-cell title="发货时间：" value="2020-09-23 09:05:42" title-class="cell-title" value-class="value" border="{{false}}" />
+			</van-cell-group>
+
+
+
+		</view>
+		<!-- 猜你喜欢 -->
+
+		<view class="recommend">
+			<view class="title">── 你可能还喜欢 ──</view>
+
+			<view class="card">
+				<view wx:for="{{6}}" wx:key="*this" class="li">
+					<list-item />
+				</view>
+			</view>
+		</view>
+
+	</view>
+</d1-layout>

@@ -1,0 +1,39 @@
+
+.card-index{
+  padding: 25rpx;
+  background: #fff !important;
+  .card-item{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #fdf8f2;
+    color: #ff2b23;
+    padding: 50rpx 25rpx;
+    border-radius: 20rpx;
+    margin-bottom: 20rpx;
+    .l{
+      font-size: 60rpx;
+      margin-right: 25rpx;
+      text{
+        font-size: 40rpx;
+      }
+
+    }
+    .c{
+      flex: 1;
+      font-size: 24rpx;
+      
+      
+    }
+    .r{
+      margin-left:25rpx;
+      .r-btn{
+        height: 55rpx;
+        background: none;
+        font-size: 24rpx;
+        padding: 0 20rpx;
+      }
+    }
+    
+  }
+}

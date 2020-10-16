@@ -1,0 +1,36 @@
+.movable-area {
+  width: 100%;
+  height: 100%;
+  $refreshHeight: 100rpx;
+  $tips-color: #999999;
+  $tips-size: 30rpx;
+  overflow: hidden;
+
+  .refresh {
+    height: $refreshHeight;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $tips-color;
+    font-size: $tips-size;
+  }
+
+  .movable-view {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+    .scroll {
+      flex: 1;
+    }
+  }
+
+  .load-more {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100rpx;
+    font-size: $tips-size;
+    color: $tips-color;
+  }
+}

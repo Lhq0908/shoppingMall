@@ -1,0 +1,14 @@
+<d1-layout id="layout" title="卡券" background="#FFFFFF" show-back="{{true}}" type="black" bind:refresh="refresh" bind:load="load">
+	<view class="card-index">
+		<view class="card-item" wx:for="{{7}}" wx:key="*this">
+			<view class="l"><text>￥</text>20</view>
+			<view class="c">
+				<view>满300可用</view>
+				<view>有效期至2030.12.31 23:59:59</view>
+			</view>
+			<view class="r">
+				<van-button plain color="#ff2b23" round custom-class="r-btn">去使用</van-button>
+			</view>
+		</view>
+	</view>
+</d1-layout>

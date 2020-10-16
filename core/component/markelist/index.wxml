@@ -1,0 +1,36 @@
+<view class="list-li">
+  <view class="li-l">
+    <van-image width="100%" height="100%" image-class="banner-thumb" fit="cover" lazy-load src="{{mainImg}}" radius="10rpx" />
+  </view>
+  <view class="li-r">
+    <view class="title">{{commodityName}}</view>
+    <view class="number-item">
+      <view class="item-l">
+        <text>{{saleNum}}</text>
+        <text>已售</text>
+      </view>
+      <view class="progress">
+        <van-progress percentage="{{progress}}" show-pivot="{{false}}" color="#42730a" stroke-width="15rpx" track-color="#fff" />
+      </view>
+      <view class="item-l">
+        <text>{{quantity}}</text>
+        <text>剩余</text>
+      </view>
+    </view>
+    <view class="price">
+      <view>
+        会员价:
+        <text>￥{{bookingMemberPrice}}</text>
+      </view>
+      <view>
+        售价:
+        <text>￥{{bookingPrice}}</text>
+        <text class="grey">￥{{salePrice}}</text>
+      </view>
+    </view>
+    <view class="time">
+      <view class="time-item">预售时间：{{endDate}}</view>
+      <view class="time-item">预计送达：{{arrivalDate}}</view>
+    </view>
+  </view>
+</view>

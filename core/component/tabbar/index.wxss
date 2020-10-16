@@ -1,0 +1,1 @@
+.d1-tabbar{height:100%;display:flex;flex-direction:column}.d1-tabbar-content{flex:1}

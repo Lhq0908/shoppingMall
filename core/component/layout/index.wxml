@@ -1,0 +1,64 @@
+<view class="d1-layout">
+	<view class="d1-header d1-header-fixed">
+		<view class="d1-status-bar" animation="{{ changeColor }}" style="height:{{ statusBarHeight }}px;background:{{ background }}"></view>
+		<view class="d1-navigation-bar" style="height:{{ navigationBarHeight }}px;color:{{  color }}">
+			<view class="d1-nav-barbg" animation="{{ changeColor }}" style="background:{{ background }};"></view>
+			<view class="d1-nav-content">
+				<view class="d1-nav-tt">
+					<view class="d1-nav-left" style="width:{{ model != 'custom' || showBack ? '190rpx' : 'auto'}}">
+						<block wx:if="{{ showBack || showHome ? showBack && showHome ? false : true : false  }}">
+							<view wx:if="{{ showBack }}" bind:tap="back" style="width:{{ navigationBarHeight }}px" class="d1-nav-left-only">
+								<view class="c">
+									<view class="ic iconfont icon-back"></view>
+								</view>
+							</view>
+							<view wx:if="{{ showHome }}" class="d1-nav-left-between">
+								<view class="d1-nav-capsule {{ capbg ? 'd1-nav-capsule-light' : 'd1-nav-capsule-black' }}" style="width:{{ showBack&&showHome?cap.width:cap.width/2 }}px;height:{{ cap.height }}px;border-radius:{{ cap.height/2 }}px;margin-top:{{ lcapTop }}px">
+									<view class="c" bind:tap="home">
+										<view class="ic iconfont icon-home"></view>
+									</view>
+								</view>
+							</view>
+						</block>
+						<view wx:if="{{ showBack && showHome }}" class="d1-nav-left-between">
+							<view class="d1-nav-capsule {{ capbg ? 'd1-nav-capsule-light' : 'd1-nav-capsule-black' }}" style="width:{{ showBack&&showHome?cap.width:cap.width/2 }}px;height:{{ cap.height }}px;border-radius:{{ cap.height/2 }}px;margin-top:{{ lcapTop }}px">
+								<view class="c" wx:if="{{ showBack }}" bind:tap="back">
+									<view class="iconfont icon-back"></view>
+								</view>
+								<view class="c" wx:if="{{ showHome }}" bind:tap="home">
+									<view class="iconfont icon-home"></view>
+								</view>
+							</view>
+						</view>
+					</view>
+					<view class="d1-nav-middle">
+						<block wx:if="{{title != '' && model != 'custom'}}">
+							<view class="default-title">{{title}}</view>
+						</block>
+						<slot wx:if="{{ model == 'custom' }}" name="navbar"></slot>
+					</view>
+				</view>
+			</view>
+		</view>
+	</view>
+	<view class="d1-content" style="{{ fixed ? 'margin-top:0px' : 'margin-top:'+(statusBarHeight+navigationBarHeight)+'px' }}">
+		<view class="top" wx:if="{{ status == 'finish' }}">
+			<slot name="top"></slot>
+		</view>
+		<view wx:if="{{ status == 'loading' }}" class="d1-layout-loading">
+			<image class="sprite" src="data:image/svg+xml;base64,PCEtLSBCeSBTYW0gSGVyYmVydCAoQHNoZXJiKSwgZm9yIGV2ZXJ5b25lLiBNb3JlIEAgaHR0cDovL2dvby5nbC83QUp6YkwgLS0+Cjxzdmcgd2lkdGg9IjM4IiBoZWlnaHQ9IjM4IiB2aWV3Qm94PSIwIDAgMzggMzgiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CiAgICA8ZGVmcz4KICAgICAgICA8bGluZWFyR3JhZGllbnQgeDE9IjguMDQyJSIgeTE9IjAlIiB4Mj0iNjUuNjgyJSIgeTI9IjIzLjg2NSUiIGlkPSJhIj4KICAgICAgICAgICAgPHN0b3Agc3RvcC1jb2xvcj0iI2ZmZiIgc3RvcC1vcGFjaXR5PSIwIiBvZmZzZXQ9IjAlIi8+CiAgICAgICAgICAgIDxzdG9wIHN0b3AtY29sb3I9IiNmZmYiIHN0b3Atb3BhY2l0eT0iLjYzMSIgb2Zmc2V0PSI2My4xNDYlIi8+CiAgICAgICAgICAgIDxzdG9wIHN0b3AtY29sb3I9IiNmZmYiIG9mZnNldD0iMTAwJSIvPgogICAgICAgIDwvbGluZWFyR3JhZGllbnQ+CiAgICA8L2RlZnM+CiAgICA8ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPgogICAgICAgIDxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKDEgMSkiPgogICAgICAgICAgICA8cGF0aCBkPSJNMzYgMThjMC05Ljk0LTguMDYtMTgtMTgtMTgiIGlkPSJPdmFsLTIiIHN0cm9rZT0idXJsKCNhKSIgc3Ryb2tlLXdpZHRoPSIyIj4KICAgICAgICAgICAgICAgIDxhbmltYXRlVHJhbnNmb3JtCiAgICAgICAgICAgICAgICAgICAgYXR0cmlidXRlTmFtZT0idHJhbnNmb3JtIgogICAgICAgICAgICAgICAgICAgIHR5cGU9InJvdGF0ZSIKICAgICAgICAgICAgICAgICAgICBmcm9tPSIwIDE4IDE4IgogICAgICAgICAgICAgICAgICAgIHRvPSIzNjAgMTggMTgiCiAgICAgICAgICAgICAgICAgICAgZHVyPSIwLjlzIgogICAgICAgICAgICAgICAgICAgIHJlcGVhdENvdW50PSJpbmRlZmluaXRlIiAvPgogICAgICAgICAgICA8L3BhdGg+CiAgICAgICAgICAgIDxjaXJjbGUgZmlsbD0iI2ZmZiIgY3g9IjM2IiBjeT0iMTgiIHI9IjEiPgogICAgICAgICAgICAgICAgPGFuaW1hdGVUcmFuc2Zvcm0KICAgICAgICAgICAgICAgICAgICBhdHRyaWJ1dGVOYW1lPSJ0cmFuc2Zvcm0iCiAgICAgICAgICAgICAgICAgICAgdHlwZT0icm90YXRlIgogICAgICAgICAgICAgICAgICAgIGZyb209IjAgMTggMTgiCiAgICAgICAgICAgICAgICAgICAgdG89IjM2MCAxOCAxOCIKICAgICAgICAgICAgICAgICAgICBkdXI9IjAuOXMiCiAgICAgICAgICAgICAgICAgICAgcmVwZWF0Q291bnQ9ImluZGVmaW5pdGUiIC8+CiAgICAgICAgICAgIDwvY2lyY2xlPgogICAgICAgIDwvZz4KICAgIDwvZz4KPC9zdmc+Cg==" />
+			<text class="d1-layout-loading-tips">正在加载</text>
+		</view>
+		<view class="d1-layout-fail" wx:elif="{{ status == 'fail' }}" bind:tap="retry">
+			<image src="data:image/png;base64,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" />
+			<text class="d1-layout-loading-tips">加载失败，请点击重试</text>
+		</view>
+		<d1-refresh id="refresh" bind:refresh="refresh" bind:load="load" bind:scroll="scroll" pull="{{ pull }}" more="{{ more }}" wx:else>
+			<slot></slot>
+		</d1-refresh>
+	</view>
+	<view class="bottom" wx:if="{{ status == 'finish' }}">
+		<slot name="bottom"></slot>
+	</view>
+	<d1-login show="{{_showLogin_}}"></d1-login>
+</view>

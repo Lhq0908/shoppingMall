@@ -1,0 +1,19 @@
+<view class="article-detail">
+    <block wx:for="{{list}}" wx:key="*this">
+        <view wx:if="{{item.type == 'text'}}" class="text">
+            <text class="t">{{item.content}}</text>
+        </view>
+        <view wx:if="{{item.type == 'image'}}" class="image">
+            <van-image fit="widthFix" width="100%" height="100%" lazy-load src="{{ __STATIC__ + item.content }}" image-class="imageClass" custom-class="customClass"/>
+        </view>
+        <view wx:if="{{ false }}" class="advert">
+            <view class="media">
+                <van-image fit="widthFix" width="100%" height="100%" radius="10rpx" lazy-load src="https://c2b-res.oss-cn-shenzhen.aliyuncs.com/45b51bbafcc734cca649f8ac26c995a.png" />
+            </view>
+            <view class="tips">
+                <view class="ad">广告</view>
+                <view class="action">查看详情</view>
+            </view>
+        </view>
+    </block>
+</view>

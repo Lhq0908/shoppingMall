@@ -1,0 +1,19 @@
+<d1-layout id="layout" title="身份验证" background="#FFFFFF" show-back="{{true}}" type="black" bind:refresh="refresh" bind:load="load">
+  <view class="verification">
+    <view class="content">
+      <view class="phone">
+        <text>原手机号</text>
+        <input type="number" value="{{ phone }}" maxlength="11" placeholder="请输入手机号" bindinput="onPhone"/>
+      </view>
+      <view class="code">
+        <text>验证码</text>
+        <input type="number" value="{{ sms }}" placeholder="请输入验证码" />
+        <text class="gain" bindtap="sendCode">{{sendTime}}</text>
+      </view>
+      <view class="btn" bindtap="dialogClick">
+        <van-button color="#3352f5" custom-class="btn-item" round>提交</van-button>
+      </view>
+    </view>
+  </view>
+
+</d1-layout>

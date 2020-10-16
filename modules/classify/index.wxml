@@ -1,0 +1,36 @@
+<d1-layout id="layout" background="#87b133" title="分类" type="light" show-back="{{false}}" show-home="{{false}}">
+	<view class="classify-index">
+		<view class="container">
+			<!--左侧栏-->
+			<view class="nav_left">
+				<block wx:for="{{classifyItems}}" wx:key="index">
+					<!--当前项的id等于item项的id，那个就是当前状态-->
+					<!--用data-index记录这个数据在数组的下标位置，使用data-id设置每个item的id值，供打开2级页面使用-->
+					<view class="nav_left_items {{curNav == item.id ? 'active' : ''}}" bindtap="switchRightTab" data-index="{{index}}" data-id="{{item.id}}">
+						{{item.name}}
+					</view>
+				</block>
+			</view>
+			<!--右侧栏-->
+			<view class="nav_right">
+				<view class="nav_right_list">
+					<!--如果有数据，才遍历项-->
+					<block wx:for="{{classifyItems[curIndex].shopClassifyDtoList}}" wx:key="index">
+						<view class="nav_right_items">
+							<!--界面跳转 -->
+							<navigator url="/pages/classifyGoods/classifyGoods?classifyId={{item.oid}}" hover-class="none">
+								<image src="{{item.imgUrl}}" mode="aspectFill"></image>
+								<text>{{item.name}}</text>
+							</navigator>
+						</view>
+					</block>
+				</view>
+
+				<!--如果无数据，则显示数据-->
+				<!-- <view class="nodata_text">该分类暂无数据</view> -->
+
+			</view>
+
+		</view>
+	</view>
+</d1-layout>

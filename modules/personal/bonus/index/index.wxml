@@ -1,0 +1,57 @@
+<d1-layout id="layout" title="我的余额" background="#FFFFFF" show-back="{{true}}" type="black" bind:refresh="refresh" bind:load="load">
+  <view class="bonus-index">
+    <!-- 余额 -->
+    <navigator url="/modules/personal/bonus/withdrawal/withdrawal" hover-class="none">
+      <view class="balance">
+        <van-icon name="balance-o" size="40px" />
+        <view class="balance-middle">
+          <view class="price-item">
+            <text>￥</text>0
+          </view>
+          <view class="price-text">
+            余额（元）
+          </view>
+        </view>
+        <view class="balance-r">
+          <text>去提现</text>
+          <van-icon name="arrow" />
+        </view>
+      </view>
+    </navigator>
+    <!-- 明细 -->
+    <view class="detailed">
+      <view class="detailed-top d-flex">
+        <view class="detailed-top-l d-flex" bindtap="showPopup">
+          {{currentDate==''?'请选择':currentDate}}
+          <van-icon name="arrow-down" custom-class="icon" />
+        </view>
+        <view class="detailed-top-r">
+          <view>累计支出：￥2222</view>
+          <view>累计收入：￥2222</view>
+        </view>
+      </view>
+      <view class="detailed-list">
+        <view class="li d-flex" wx:for="{{5}}" wx:key="*this">
+          <image class="li-img" src="https://img.yzcdn.cn/vant/cat.jpeg" mode="aspectFill" />
+          <view class="li-middle">
+            <view class="words">
+              提现
+            </view>
+            <view class="time">
+              2020-6-10 11:20
+            </view>
+          </view>
+          <view class="price-one">
+            ￥123
+          </view>
+
+        </view>
+
+      </view>
+    </view>
+    <!-- 选择时间弹窗 -->
+    <van-popup show="{{ timeShow }}" position="bottom" custom-style="height: 40%;" bind:close="onClose">
+      <van-datetime-picker type="year-month" value="{{ currentDate }}" min-date="{{ minDate }}" bind:input="onInput" bind:confirm="definelBind" bind:cancel="cancelBind" />
+    </van-popup>
+  </view>
+</d1-layout>

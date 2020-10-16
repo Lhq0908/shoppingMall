@@ -1,0 +1,39 @@
+<d1-layout id="layout" title="提现申请" background="#FFFFFF" show-back="{{true}}" type="black" bind:refresh="refresh" bind:load="load">
+  <view class="success">
+    <view class="success-top">
+      <image class="success-img" src="../../../../assets/pay_success.png" mode="aspectFill" />
+      <view class="success-text">
+        提现申请成功
+      </view>
+      <view class="tips">系统将在1个工作日内进行处理，请您留意查看</view>
+    </view>
+    <view class="details-record">
+      <view class="record-item">
+        <text class="record-item-l">提现微信</text>
+        <view class="record-item-r info">
+          <image class="info-img" src="https://img.yzcdn.cn/vant/cat.jpeg" mode="aspectFill" />黄小小
+        </view>
+      </view>
+      <view class="record-item">
+        <text class="record-item-l">到账金额</text>
+        <view class="record-item-r">2020032080000001</view>
+      </view>
+      <view class="record-item">
+        <text class="record-item-l">手续费</text>
+        <view class="record-item-r">￥9500.00</view>
+      </view>
+      <view class="record-item">
+        <text class="record-item-l">申请时间</text>
+        <view class="record-item-r">2020年3月24日 05:02:46</view>
+      </view>
+
+    </view>
+    <view class="btn" bindtap="dialogClick">
+      <navigator url="/modules/index/index" hover-class="none">
+        <van-button color="#3352f5" custom-class="btn-item" round>返回首页</van-button>
+      </navigator>
+    </view>
+
+  </view>
+
+</d1-layout>

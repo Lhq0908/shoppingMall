@@ -1,0 +1,19 @@
+<movable-area id="movable-area" class="movable-area">
+	<movable-view direction="vertical" y="{{ pull ? y : 0 }}" bind:touchstart="touchstart" bind:change="change" bind:touchend="touchend" disabled="{{ pull ? status >= 2 : true }}" class="movable-view" style="{{ pull ? 'height: calc(100% + 100rpx)' : 'height:100%' }}">
+		<view id="refresh" class="refresh" wx:if="{{ pull }}">
+			<text wx:if="{{ status == 0 }}">下拉即可刷新...</text>
+			<text wx:if="{{ status == 1 }}">释放即可刷新...</text>
+			<text wx:if="{{ status == 2 }}">加载中...</text>
+			<text wx:if="{{ status == 3 }}">刷新成功...</text>
+		</view>
+		<view class="scroll">
+			<scroll-view id="scroll" scroll-y="{{ pull ? status < 2 : true }}" bindscroll="scroll" lower-threshold="100rpx" bindscrolltolower="lower" style="height:{{scrollHeight}}px">
+				<slot></slot>
+				<view id="more" class="load-more" wx:if="{{ more && showMore }}">
+					<text wx:if="{{ loadStatus == 0 }}">正在加载...</text>
+					<text wx:if="{{ loadStatus == 1 }}">没有更多数据了</text>
+				</view>
+			</scroll-view>
+		</view>
+	</movable-view>
+</movable-area>

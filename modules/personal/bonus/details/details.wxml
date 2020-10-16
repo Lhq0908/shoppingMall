@@ -1,0 +1,42 @@
+<d1-layout id="layout" title="查看详情" background="#FFFFFF" show-back="{{true}}" type="black" bind:refresh="refresh" bind:load="load">
+
+  <view class="bonus-details" >
+    <view class="details-top">
+      <view class="info">
+        <image class="info-img" src="https://img.yzcdn.cn/vant/cat.jpeg" mode="aspectFill" />
+        <text>黄小小</text>
+      </view>
+      <view class="money">
+        +￥10.00
+      </view>
+    </view>
+    <view class="details-record">
+      <view class="record-item">
+        <text class="record-item-l">订单名称</text>
+        <text class="record-item-r">推荐购买奖励</text>
+        <!-- <text class="record-item-r">提现100元</text>
+        <text class="record-item-r">购物返奖励金</text> -->
+      </view>
+      <view class="record-item">
+        <text class="record-item-l">订单号</text>
+        <text class="record-item-r">2019010118000001</text>
+      </view>
+      <view class="record-item">
+        <text class="record-item-l">订单状态</text>
+        <text class="record-item-r">交易完成</text>
+      </view>
+      <view class="record-item">
+        <text class="record-item-l">创建时间</text>
+        <text class="record-item-r">2020年3月24日 05:02:46</text>
+      </view>
+      <view class="record-item">
+        <text class="record-item-l">完成时间</text>
+        <text class="record-item-r">2020年3月24日 05:02:46</text>
+      </view>
+
+    </view>
+
+
+  </view>
+
+</d1-layout>

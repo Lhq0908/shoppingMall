@@ -1,0 +1,10 @@
+<d1-layout id="layout" title="我的收藏" background="#FFFFFF" show-back="{{true}}" type="black" bind:refresh="refresh" bind:load="load">
+	<view class="favorite-index">
+  <view class="card">
+  <view wx:for="{{1}}" wx:key="*this" class="li">
+			<list-item />
+		</view>
+  </view>
+		
+	</view>
+</d1-layout>

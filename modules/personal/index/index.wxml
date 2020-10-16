@@ -1,0 +1,53 @@
+<view class="personal-index">
+	<view class="top">
+		<image src="../../../assets/index_wd_img.png" class="top-bg" />
+		<view class="modular">
+			<view class="top-item">
+				<image src="https://img.yzcdn.cn/vant/cat.jpeg" mode="scaleToFill" class="top-item-head" />
+				<view class="top-item-info">
+					<text class="name">设置你的昵称~</text>
+					<view class="info-icon">
+						<image src="../../../assets/icon/set.png" />
+						<image src="../../../assets/icon/service.png" bindtap="telClick" />
+					</view>
+				</view>
+			</view>
+			<view class="submenu">
+				<view class="">
+					<navigator url="/modules/personal/favorite/index" hover-class="none"><text>1</text> 收藏夹</navigator>
+				</view>
+				<view class="">
+					<text>222</text> 关注
+				</view>
+				<view class="">
+					<navigator url="/modules/personal/footprint/index" hover-class="none"><text>1</text> 足迹</navigator>
+				</view>
+				<view class="">
+					<navigator url="/modules/personal/card/index" hover-class="none"><text>6</text> 卡券</navigator>
+				</view>
+			</view>
+		</view>
+	</view>
+	<!-- <view class="card">
+		<view class="card-item">
+			<view class="li">
+				<image src="../../../assets/icon/member.png" /> 会员中心
+			</view>
+
+			<view class="li" bindtap="walletClick">
+				<image src="../../../assets/icon/wallet.png" /> 我的钱包
+			</view>
+
+		</view>
+	</view> -->
+	<van-cell-group custom-class="cell-group">
+		<van-cell is-link title="我的订单" link-type="navigateTo" url="/modules/personal/order/index/index" />
+		<van-cell is-link title="消息通知" link-type="navigateTo" url="/modules/personal/notice/index/index" />
+		<!-- <van-cell is-link title="我的地址" link-type="navigateTo" url="" />
+		<van-cell is-link title="服务中心" link-type="navigateTo" url="" /> -->
+		<van-cell is-link title="我要反馈" link-type="navigateTo" url="" bindtap="telClick" />
+
+	</van-cell-group>
+
+
+</view>

@@ -1,0 +1,1 @@
+.favorite-index{padding:25rpx}.favorite-index .card{width:100%;display:flex;flex-wrap:wrap;justify-content:space-between}.favorite-index .card .li{width:49%}
